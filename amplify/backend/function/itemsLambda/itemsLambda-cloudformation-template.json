@@ -16,6 +16,21 @@
         "s3Key": {
             "Type": "String"
         }
+        ,
+    
+    
+    
+        "storageecomName": {
+            "Type": "String",
+            "Default": "storageecomName"
+            },
+        
+        "storageecomArn": {
+            "Type": "String",
+            "Default": "storageecomArn"
+            }
+        
+    
         
     
     },
@@ -49,13 +64,13 @@
             "FunctionName": {
                 "Fn::If": [
                     "ShouldNotCreateEnvResources",
-                    "mochowecom1687423d",
+                    "itemsLambda",
                     {
 
                         "Fn::Join": [
                             "",
                             [
-                                "mochowecom1687423d",
+                                "itemsLambda",
                                 "-",
                                 {
                                     "Ref": "env"
@@ -80,13 +95,13 @@
                 "RoleName": {
                     "Fn::If": [
                         "ShouldNotCreateEnvResources",
-                        "mochowecomLambdaRole4b38e466",
+                        "mochowecomLambdaRolec242e168",
                         {
 
                             "Fn::Join": [
                                 "",
                                 [
-                                    "mochowecomLambdaRole4b38e466",
+                                    "mochowecomLambdaRolec242e168",
                                     "-",
                                     {
                                         "Ref": "env"
@@ -129,7 +144,26 @@
                             "logs:CreateLogStream",
                             "logs:PutLogEvents"],
                             "Resource": { "Fn::Sub": [ "arn:aws:logs:${region}:${account}:log-group:/aws/lambda/${lambda}:log-stream:*", { "region": {"Ref": "AWS::Region"}, "account": {"Ref": "AWS::AccountId"}, "lambda": {"Ref": "LambdaFunction"}} ]}
+                        },
+                        {
+                            "Effect": "Allow",
+                            "Action": ["dynamodb:DescribeTable","dynamodb:GetItem","dynamodb:Query","dynamodb:Scan","dynamodb:PutItem","dynamodb:UpdateItem","dynamodb:DeleteItem"],
+                            "Resource": [
+                            
+                                { "Ref": "storageecomArn" },
+                                {
+                                    "Fn::Join": [
+                                        "/",
+                                        [
+                                            { "Ref": "storageecomArn" },
+                                            "index/*"
+                                        ]
+                                    ]
+                                }
+                            
+                            ]
                         }
+                        
                     ]
                 }
             }

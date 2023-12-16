@@ -3,7 +3,7 @@
   "paths": {
     "/items": {
       "name": "/items",
-      "lambdaFunction": "mochowecom260d5e88",
+      "lambdaFunction": "itemsLambda",
       "permissions": {
         "setting": "open"
       }

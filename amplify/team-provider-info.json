@@ -10,6 +10,15 @@
       "StackName": "amplify-amplifyfd46909528bf4-staging-31531",
       "StackId": "arn:aws:cloudformation:us-east-2:940913902967:stack/amplify-amplifyfd46909528bf4-staging-31531/35b180d0-9641-11ee-9a55-022d45203ffd",
       "AmplifyAppId": "d2zle2jryu6vxy"
+    },
+    "categories": {
+      "function": {
+        "mochowecom1687423d": {
+          "deploymentBucketName": "amplify-amplifyfd46909528bf4-staging-31531-deployment",
+          "s3Key": "amplify-builds/mochowecom1687423d-594255466d5756367653-build.zip"
+        },
+        "itemsLambda": {}
+      }
     }
   }
 }

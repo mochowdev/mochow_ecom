@@ -1,0 +1,10 @@
+{
+  "resourceName": "ecom",
+  "tableName": "books",
+  "partitionKey": {
+    "fieldName": "title",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
