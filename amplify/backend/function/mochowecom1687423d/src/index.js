@@ -3,8 +3,14 @@
 /**
  * @type {import('@types/aws-lambda').APIGatewayProxyHandler}
  */
-exports.handler = async (event) => {
+
+const awsServerlessExpress = require('aws-serverless-express');
+const app = require('../../../api/friendleyApi1/src/app');
+const server = awsServerlessExpress.createServer(app);
+
+exports.handler = async (event,context) => {
     console.log(`EVENT: ${JSON.stringify(event)}`);
+    awsServerlessExpress.proxy(server,event,context);
     return {
         statusCode: 200,
     //  Uncomment below to enable CORS requests
