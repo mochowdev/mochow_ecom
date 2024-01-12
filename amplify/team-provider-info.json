@@ -18,6 +18,9 @@
           "s3Key": "amplify-builds/mochowecom1687423d-594255466d5756367653-build.zip"
         },
         "itemsLambda": {}
+      },
+      "api": {
+        "friendleyApi1": {}
       }
     }
   }

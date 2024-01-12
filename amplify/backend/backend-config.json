@@ -1,4 +1,20 @@
 {
+  "api": {
+    "friendleyApi1": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "mochowecom1687423d"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "parameters": {
     "AMPLIFY_function_mochowecom1687423d_deploymentBucketName": {
       "usedBy": [
