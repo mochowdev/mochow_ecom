@@ -5,7 +5,7 @@ const productRoutes = require('./routes/products');
 const app = express();
 
 // Use product routes
-app.use('/products', productRoutes);
+app.use('/main', productRoutes);
 
 // Other middleware and routes...
 
