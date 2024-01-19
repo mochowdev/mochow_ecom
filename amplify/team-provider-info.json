@@ -15,7 +15,7 @@
       "function": {
         "mochowecom1687423d": {
           "deploymentBucketName": "amplify-amplifyfd46909528bf4-staging-31531-deployment",
-          "s3Key": "amplify-builds/mochowecom1687423d-3051427a377033794d33-build.zip"
+          "s3Key": "amplify-builds/mochowecom1687423d-67614e79393434346d4b-build.zip"
         },
         "itemsLambda": {}
       },
