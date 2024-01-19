@@ -1,5 +1,19 @@
 {
   "api": {
+    "api6e4b3216": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "mochowecom1687423d"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    },
     "friendleyApi1": {
       "dependsOn": [
         {
